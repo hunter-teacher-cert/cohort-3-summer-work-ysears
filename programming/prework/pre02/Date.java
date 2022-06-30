@@ -7,16 +7,19 @@ month = "April";
 date = 1 ;
 year =  2022;
 
+  //Exercise 3
 System.out.println(day); 
 System.out.println(month);
 System.out.println(date);
 System.out.println(year);
 
+  //Exercise 4 American
 System.out.print(day );
 System.out.print(month + " " );
 System.out.print(date );
 System.out.println(", "+ year );
-
+  
+//Exercise 5 European
 System.out.print(day );
 System.out.print(date );
 System.out.print( " " + month );
