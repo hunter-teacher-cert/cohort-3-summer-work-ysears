@@ -1,0 +1,39 @@
+Exercise 2
+public static int banana(int[] a) {
+    int kiwi = 1;
+    int i = 0;
+    while (i < a.length) {
+        kiwi = kiwi * a[i];
+        i++;
+    }
+    return kiwi;
+}
+
+Method banana- finds and returns the product of the integers from array "a"
+  a= array; i=index; kiwi=holds the product of the integers
+
+
+public static int grapefruit(int[] a, int grape) {
+    for (int i = 0; i < a.length; i++) {
+        if (a[i] == grape) {
+            return i;
+        }
+    }
+    return -1;
+}
+Method grapefruit- finds and returns the index of the first element in array "a" that matches the variable "grape". If there isn't a match, it will return -1 instead.
+  a= array, i=index; grape = target value
+
+
+public static int pineapple(int[] a, int apple) {
+    int pear = 0;
+    for (int pine: a) {
+        if (pine == apple) {
+            pear++;
+        }
+    }
+    return pear;
+}
+Method pineapple- traverses through the array "a" and counts the total number of times that element "apple" is present in the array.
+Variables: 
+  a= array; pine=index; pear=count; apple= target value

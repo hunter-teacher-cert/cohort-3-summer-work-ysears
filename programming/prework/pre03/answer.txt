@@ -1,0 +1,17 @@
+When ping is invoked, it prints a period and goes to the next line.
+When baffle is invoked, it prints "wug". Ping is then invoked and it prints a period and goes to the next line. 
+
+Overall output of the program is:
+No, I wug.
+You wugga wug.
+I wug.
+The cursor ends on the next line.
+
+Q2: I was a little confused by this but I think this is the answer:
+main-zoop
+zoop-baffle
+baffle-ping
+ping - "."
+
+
+Q3: If you invoke baffle(); at the end of the ping method, it would call both methods indefinitely.
