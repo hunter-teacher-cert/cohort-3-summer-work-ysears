@@ -11,7 +11,8 @@ public class Guess {
       System.out.print("I'm thinking of a number between 1 and 100(including both). Can you guess what it is? ");
       System.out.println ("Type a number:");
       userguess = input.nextInt(); 
-      // in.nextLine(); should be here?
+      //added input.nextLine
+      input.nextLine();
      System.out.println("Your guess is: " + userguess);
       System.out.println("The number I was thinking of is: " + myNumber);
       
