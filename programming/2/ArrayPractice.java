@@ -61,7 +61,6 @@ public class ArrayPractice
     return data;
   }
 
-
   // buildRandomArray method
   public static int[] buildRandomArray(int size, int maxValue )
   {Random r = new Random();
@@ -123,15 +122,14 @@ public class ArrayPractice
      value of the largest element in the array
   */
   public static int findMaxValue( int[] data ) {
-    int m = Integer.MIN_VALUE; 
+    int m = Integer.MIN_VALUE; // lowest possible # in Java (M.T.)
   for(int i=0; i<data.length; i++){
-    if data[i] > m{
+    if data[i] > m {
       m = data[i]; // overwrites m with higher value found for each index.
     }
   }
     return m;
   }
-
 
   /**
      Parameters:
