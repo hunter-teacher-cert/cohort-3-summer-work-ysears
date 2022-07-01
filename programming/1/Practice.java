@@ -1,16 +1,36 @@
+import java.io.*;
+import java.util.*;
 
-//Precondition: someString does not begin with spaces. Words are separated by spaces.
-int i =0
-  while (someString.charAt(i)!=''){
-  i++
-  }
+public class Practice{
+  
+  public static void main(String[] args){
+
+  int MAX_SIZE = 1000;
+  int theArray[] =new int[MAX_SIZE];
+  int currSize = 0;
+    
+// Exercise 1
+for (int i=0; i < currSize; i++ )
+{ 
+  System.out.print(theArray [i] +"");
+} 
+  System.out.println();
 
 
-//Postcondition: someString in position i IS a space. Go through all the spaces after the first word
-while(someString.charAt(i)==''){
-  i++
+    
+// Exercise 5 in slides
+  int targetPosition;
+    Scanner input= new Scanner(System.in);
+    System.out.println("Enter the position of the number you want to delete ");
+    targetPosition=input.nextInt();
+
+    for (int i=targetPosition; i<currSize-1;i++) {
+      theArray[i] = theArray[i+1];
+    }
+    currSize = currSize+1;
 }
 
 
-//Postcondition:someString in position i IS NOT a space. Go through the second word character by character and display each charaacter.
-while (someString.charAt(i)!= '')
+
+  
+}
