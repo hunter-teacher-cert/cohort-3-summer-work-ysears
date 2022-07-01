@@ -1,7 +1,7 @@
 /**
- * ArrayPractice by Team BossCoders
- * First Last
- * collaborators: First Last, First Last
+ * ArrayPractice 
+ * Yanique Sears
+ * collaborators: Jessica Novillo, Marieke Thomas
  */
 
 /**
