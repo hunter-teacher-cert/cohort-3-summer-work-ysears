@@ -96,7 +96,6 @@ public class Array2DPractice
     }
   }
 
-
   /**
      copyBoard-creates and returns a new 2D array of char the same size as
      original and copies all the elements
@@ -117,7 +116,8 @@ public class Array2DPractice
     explodeSquare- changes all elements around a given value (neighbor cells) to 'X'. When putting into the main, you need to sprecify the array,row and column.
   */
   public static void explodeSquare( char[][] board, int row, int col )
-  {for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++) //start at index 0 or row - 1, whichever is larger; end at index row + 1 or length - 1, whichever is smaller. (Avoid out of bounds error)
+  {for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++) 
+/*start at index 0 or row - 1, whichever is larger; end at index row + 1 or length - 1, whichever is smaller. (Avoid out of bounds error)*/
     {for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[i].length); j++)
       {if (! (i == row && j == col))
           {board[i][j] = 'X';
@@ -155,7 +155,21 @@ public class Array2DPractice
   */
   public static void explodeAllChar(char[][] board, char c)
   {
-    /* YOUR AWESOME CODE HERE */
+    /**
+Go through each row starting at row 0.
+  Go through each column starting at 0. 
+    If the element in this location is equal to c
+      use explodeSquare method
+*/
+
+  for (int i = 0; i < board.length; i++) {
+      for (int j = 0; j < board[0].length; j++) {
+        if (board[i][j] == c) {
+          explodeSquare (board, i, j);
+        }
+      }
+    }
+   }
   }
 
 
