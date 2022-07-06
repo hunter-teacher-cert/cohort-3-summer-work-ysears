@@ -108,10 +108,13 @@ public class ArrayPractice
      An array with values 5,6,10,13,15 is not
   */
   public static boolean isSorted( int[] data )
-  {
-    /* YOUR BRILLIANT CODE HERE */
-
-    return true; // replace this
+  {//Jessica's solution!
+   for (int i=0; i<data.length - 1; i++){
+      if (data[i] > data[i+1]){
+        return false;
+      }
+    }
+    return true;
 
   }
 
@@ -139,14 +142,14 @@ public class ArrayPractice
      Ex: if data holds 5,6,7,8,9,10 then the return value
      will be 3 since three of the elements are odd.
   */
-  public static int countOdds( int[] data ) {
-    int count;
+  public static int countOdds( int[] data ) { //Marieke's solution!
+    int count = 0;
 
-    /* YOUR BRILLIANT CODE HERE */
-
-    // Note the % operator is the modulo (basically remainder) function
-    // in java. Use to determine if an integer is odd.
-
+    for (int i=0; i<data.length; i++){
+      if (data[i]%2 != 0){
+        count ++;
+      }
+    }
     return count;
   }
 
