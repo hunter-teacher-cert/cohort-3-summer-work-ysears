@@ -7,15 +7,7 @@ import java.util.*;
  * collaborators: Kiana Herr, Jenna Lin, Nicole Cojuangco
  */
 
-/*********************************************
-INSTRUCTIONS:
-
-Place this file in a folder named programming/3/.
-
-This file contains the following completed method. Use it as a model to help you with the other methods:
-
-   - buildBoard
-
+/*
 This file also contains stubs (empty methods) for the followingmethods (split into 3 levels):
 
    Basic level (complete all):
@@ -47,8 +39,7 @@ Use this completed method as an example to help you with some of the other metho
 public class Array2DPractice
 {
   public static char[][] buildBoard( int rows, int cols, char value )
-  {
-    char[][] board = new char[rows][cols];
+  {char[][] board = new char[rows][cols];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         board[i][j]=value;
@@ -59,18 +50,17 @@ public class Array2DPractice
 
   /**
      pretty prints a 2D array of characters
-
      This should print the array as a grid
   */
   public static void printBoard( char[][] board )
   {
-    for (int i = 0; i < board.length; i++)
+    for (int i = 0; i < board.length; i++) //traverses rows
     {
-      for (int j = 0; j < board[i].length; j++)
+      for (int j = 0; j < board[i].length; j++) //traverses columns
       {
-        System.out.print(board[i][j] + " ");
+        System.out.print(board[i][j] + " ");//prints elements with space
       }
-      System.out.println();
+      System.out.println(); //at the end of each row, go to the next line.
     }
   }
 
@@ -108,71 +98,29 @@ public class Array2DPractice
 
 
   /**
-     creates and returns a new 2D array of char the same size as
+     copyBoard-creates and returns a new 2D array of char the same size as
      original and copies all the elements
   */
   public static char[][] copyBoard( char[][] original )
-  {
-    char [][] duplicateBoard = new char[original.length][original[0].length];
+  {char [][] duplicateBoard = new char[original.length][original[0].length];// set size of new board in rows and columns
 
     for (int i = 0; i < original.length; i++)
-    {
-        for (int j = 0; j < original[i].length; j++)
-        {
-            duplicateBoard[i][j] = original[i][j];
+    {for (int j = 0; j < original[i].length; j++)
+        {duplicateBoard[i][j] = original[i][j];
         }
     }
-
     return duplicateBoard;
   }
 
 
   /**
-     Parameters:
-     board - a 2D array of char
-     row,col - ints specifying a location in board
-
-     Returns:
-     nothing
-
-     A location in a 2D array can be though of as having 8
-     neighbors.  In the below 2D array, the neighbors of the element
-     marked Q are the numbered elements.
-
-     oooooo
-     o123oo
-     o4Q5oo
-     o678oo
-     oooooo
-
-     This method should change all the neighbor cells (elements) to an X
-     but not change the element at row,col
-
-     Ex:
-     Given the 2D array
-     QQQQQ
-     QQQQQ
-     QQQQQ
-     QQQQQ
-
-     explodeSquare(board,1,1) will change the array to
-     XXXQQ
-     XQXQQ
-     XXXQQ
-     QQQQQ
-
-     Note: Make sure to correctly handle the cases when you try
-     to explode an element on the edges.
+    explodeSquare- changes all elements around a given value (neighbor cells) to 'X'. When putting into the main, you need to sprecify the array,row and column.
   */
   public static void explodeSquare( char[][] board, int row, int col )
-  {
-    for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++) //start at index 0 or row - 1, whichever is larger; end at index row + 1 or length - 1, whichever is smaller. (Avoid out of bounds error)
-    {
-      for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[i].length); j++)
-      {
-          if (! (i == row && j == col))
-          {
-            board[i][j] = 'X';
+  {for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++) //start at index 0 or row - 1, whichever is larger; end at index row + 1 or length - 1, whichever is smaller. (Avoid out of bounds error)
+    {for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[i].length); j++)
+      {if (! (i == row && j == col))
+          {board[i][j] = 'X';
           }
       }
     } 
