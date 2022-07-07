@@ -73,7 +73,7 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-	return("This should be changed to return the time in a nice form");
+	return("The time is now " + Time);
     }
 
 
