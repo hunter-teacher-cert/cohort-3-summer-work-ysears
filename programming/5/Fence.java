@@ -16,16 +16,18 @@ public class Fence
      fenceR(1) -> "|"
      fenceR(2) -> "|--|"
   */
-  public static String fenceR (int n)
-  { if (n == 0){
-    return "0";
-  }else{
-      fenceR(n-1);
-    
-  }
-    /* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
-  }
-
+  public static String fenceR( int n )
+  { // Base case: n == 0 --> ""; n == 1 --> "|"
+    if (n == 0){
+      return "";
+    }
+    else if (n == 1){
+      return "|";
+    }
+    else{ //recursive here
+      return fenceR (n-1) + "--|";
+    }
+}
 
   public static void main( String[] args )
   {
