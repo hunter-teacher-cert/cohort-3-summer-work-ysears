@@ -24,7 +24,7 @@ public class Fence
     else if (n == 1){
       return "|";
     }
-    else{ //recursive here
+    else{ //recursive here! Adding "--| to whatever was there!"
       return fenceR (n-1) + "--|";
     }
 }
