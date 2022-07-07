@@ -3,23 +3,10 @@
 /**
  * Conway's Game of Life by Room 12
  * Yanique Sears
- * collaborators: Tanya W	adam d	Jing X	Yanique S
+ * collaborators: Tanya W, Adam D, Jing X
  */
 import java.io.*;
 import java.util.*;
-
-
-/**
-   The Rules of Life:
-   Survivals:
-   * A living cell with 2 or 3 living neighbours will survive for the next generation.
-   Deaths:
-   * Each cell with >3 neighbours will die from overpopulation.
-   * Every cell with <2 neighbours will die from isolation.
-   Births:
-   * Each dead cell adjacent to exactly 3 living neighbours is a birth cell. It will come alive next generation.
-   NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
-*/
 
 public class Cgol{
 //create, initialize, and return  empty board (all cells dead)(live cells = 'X';dead cells = '-')
@@ -39,9 +26,7 @@ public class Cgol{
   {
     for (int i= 0; i< board.length; i++){
       for (int j = 0; j <board[0].length; j++){
-        
         System.out.print(board[i][j] + " ");
-        
       }
       System.out.println();  
     }    
@@ -57,8 +42,7 @@ public class Cgol{
 
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int row, int col )
-  {
-    int count =0;
+  {int count =0;
     //similar to explode
     for (int i = Math.max(0, row - 1); i <= Math.min(row + 1, board.length - 1); i++) {
       for (int j = Math.max(0, col - 1); j <= Math.min(col + 1, board[i].length-1); j++) {
@@ -87,15 +71,15 @@ public class Cgol{
   //  * Each dead cell adjacent to exactly 3 living neighbours is a birth cell. It will come alive next 
   public static char getNextGenCell( char[][] board,int r, int c )
   {
-    char nextGenCell = board[r][c]; //current value of at r,c
-    int count = countNeighbours(board, r, c);////check the neighbors of r,c
-    if (nextGenCell == 'X'){ //if cell is alive
-      if (count < 2 || count >3){// too lonely or too crowded
+    char nextGenCell = board[r][c];             //current value of at r,c
+    int count = countNeighbours(board, r, c);   //check the neighbors of r,c
+    if (nextGenCell == 'X'){                    //if cell is alive
+      if (count < 2 || count >3){               // too lonely or too crowded
         nextGenCell = '-';
       } 
      
-    } else { // dead cell
-        if (count == 3){ //dead cell with three alive neighbors becomes alive
+    } else {                      // dead cell
+        if (count == 3){         //dead cell with three alive neighbors becomes alive
           nextGenCell = 'X';
         }
       }
