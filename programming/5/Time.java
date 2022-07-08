@@ -45,40 +45,32 @@ public class Time {
     int minutes;
     int seconds;
 
-    // Constructors
-    public Time(){
+  // Constructors --> only called the FIRST time you make a time
+  public Time(){
 	this.hours = 0;
 	this.minutes = 0;
 	this.seconds = 0;
-	
+	//sets these to zero every time
     }
 
     /**
        Parameters:
-       - hrs, mins, secs - the time you want to create the class as
-
+       - hrs, mins, secs - the time you want to create the class a
        Initialize this instance to represent hrs:mins:secs as the time.
-       
      */
     public Time(int hrs, int mins, int secs){
-
-	// your code here
-	
+      hours = hrs
+      minutes = mins
+      seconds = secs
     }
     
-    
     // Methods
-
     /**
        returns a string representation of the time
     */
     public String toString(){
-	return("The time is now " + Time);
+	    return("The time is now " + hours + ":" + minutes + ":" + seconds);
     }
-
-
-    
-
     /**
        Parameters:
        - hrs,mins,secs - ints representing a time
@@ -87,23 +79,24 @@ public class Time {
     */
     public void set(int hrs, int mins, int secs){
 	// add the code to add the time represented by other
-	// to this instance.
-
+	// to this instance. For EXISTING time
+      hours = hrs
+      minutes = mins
+      seconds = secs
     }
-
-    
-
     /**
        Parameters:
        - other - a variable of type Time
-
-       modifies this instance to represent the result of adding it and
-       the time other.
+    modifies this instance to represent the result of adding it and the time other.
     */
     public void add(Time other){
 	// add the code to add the time represented by other
 	// to this instance.
+    hours + other.hours;     // adding together first hours with new hours
+    seconds + other.seconds  // adding together first seconds with new seconds
+    minutes + other.minutes  // adding together first minutes with new minutes
 
+      //NOT on a 100 scale. How to check for overflow in mins/seconds?????
     }
 
 
