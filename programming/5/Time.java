@@ -37,16 +37,13 @@ import java.util.*;
 
 
 public class Time {
-    // Instance Variable(s)
-    // You can change this if you want to use the alternate
-    // implementation of just storing the overall seconds.
-    
-    int hours;
-    int minutes;
-    int seconds;
+    // Instance Variable(s) --> PRIVATE; hold data for the objects in the class
+    private int hours;
+    private int minutes;
+    private int seconds;
 
-  // Constructors --> only called the FIRST time you make a time
-  public Time(){
+  // Constructors --> only called the FIRST time you make a time; INITIALIZE the instance variables
+  public Time(){ //same name as the class
 	this.hours = 0;
 	this.minutes = 0;
 	this.seconds = 0;
@@ -58,10 +55,10 @@ public class Time {
        - hrs, mins, secs - the time you want to create the class a
        Initialize this instance to represent hrs:mins:secs as the time.
      */
-    public Time(int hrs, int mins, int secs){
-      hours = hrs
-      minutes = mins
-      seconds = secs
+    public Time(int hrs, int mins, int secs){ //initializes constructors to parameters
+      hours = hrs;
+      minutes = mins;
+      seconds = secs;
     }
     
     // Methods
@@ -80,9 +77,9 @@ public class Time {
     public void set(int hrs, int mins, int secs){
 	// add the code to add the time represented by other
 	// to this instance. For EXISTING time
-      hours = hrs
-      minutes = mins
-      seconds = secs
+      hours = hrs;
+      minutes = mins;
+      seconds = secs;
     }
     /**
        Parameters:
@@ -92,9 +89,12 @@ public class Time {
     public void add(Time other){
 	// add the code to add the time represented by other
 	// to this instance.
-    hours + other.hours;     // adding together first hours with new hours
-    seconds + other.seconds  // adding together first seconds with new seconds
-    minutes + other.minutes  // adding together first minutes with new minutes
+   int addHours = hours + other.hours;    
+      // adding together first hours with new hours
+    int addSeconds = seconds + other.seconds;  
+      // adding together first seconds with new seconds
+    int addMinutes = minutes + other.minutes; 
+      // adding together first minutes with new minutes
 
       //NOT on a 100 scale. How to check for overflow in mins/seconds?????
     }
