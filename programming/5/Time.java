@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * Time class by Team LucidThinkeren
- * First Last
- * collaborators: First Last, First Last
+ * Yanique Sears
+ * collaborators: Seth Adams, Harrison Fung, Taylor -worked independently and consulted on best practices
  */
 
 /**
@@ -62,21 +62,13 @@ public class Time {
     }
     
     // Methods
-    /**
-       returns a string representation of the time
-    */
-    public String toString(){
+    public String toString(){ 
+      //returns a string representation of the time
 	    return("The time is now " + hours + ":" + minutes + ":" + seconds);
     }
-    /**
-       Parameters:
-       - hrs,mins,secs - ints representing a time
-
-       modifies this instance to represent the time hrs:mins:secs
-    */
+   
     public void set(int hrs, int mins, int secs){
-	// add the code to add the time represented by other
-	// to this instance. For EXISTING time
+	// Update this Time object according to the inputs. For EXISTING time. Updates instance variables to current values
       hours = hrs;
       minutes = mins;
       seconds = secs;
@@ -97,6 +89,19 @@ public class Time {
       // adding together first minutes with new minutes
 
       //NOT on a 100 scale. How to check for overflow in mins/seconds?????
+
+      /*{
+	    hours += other.hours;
+      seconds += other.seconds;
+      if(seconds >= 60){
+        minutes += 1;
+        seconds -= 60;
+      }
+      minutes += other.minutes;
+      if(minutes >= 60){
+        hours += 1;
+        minutes -= 60;
+      }*/
     }
 
 
@@ -109,10 +114,12 @@ public class Time {
        false otherwise.
     */
     public boolean equals(Time other){
-	// your code here)
-
-	return false; // change this
-    }
+      if (hours == other.hours && 
+          minutes == other.minutes &&             
+          seconds == other.seconds);
+	      return true;
+    } else {
+      return false;}
 
     /**
        Parameters:
