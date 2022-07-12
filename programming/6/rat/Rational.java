@@ -4,7 +4,6 @@
  * collaborators: Yenmin Young, Steve Sabaugh, Latoya Boland
  */
 
-
 /**
    class Rational
    An instance of this class will represent a rational number (p/q s.t. p,q ints && q!=0),
@@ -52,7 +51,6 @@ public class Rational
       _denominator = d; 
   }
 
-
   // toString
   // returns a string representation of the rational number (formatting of your choice)
   public String toString()
@@ -78,8 +76,9 @@ public class Rational
   // need not reduce
   public void multiply( Rational r )
   {
-    r = this.floatValue() * r.floatValue();
-
+    //r = this.floatValue() * r.floatValue();
+  _numerator *= r._numerator;
+  _denominator *= r._denominator;
   }
 
 
@@ -87,7 +86,8 @@ public class Rational
   // same as multiply, except operation is division
   public void divide( Rational r )
   {
-    /* YOUR ELEGANT CODE HERE */
+    _numerator *= r._denominator;
+    _denominator *= r._numerator;
   }
 
 }//end class
