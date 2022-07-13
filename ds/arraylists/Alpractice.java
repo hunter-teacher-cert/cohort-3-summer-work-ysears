@@ -1,7 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-/** Methods to write
+/** collaborated with Sarah McCoy and Steve Sabaugh
+
+Methods to write
 
 Basic level:
 ------------
@@ -40,7 +42,7 @@ public class AlPractice{
 			rando.add(r.nextInt(maxval));//append random numbers
 		}
 
-    return rando;//placeholder to compile.
+    return rando;
   }
 
   /**
@@ -54,7 +56,7 @@ public class AlPractice{
     for(int i = 0; i < dataList.size(); i ++){
       sum+= dataList.get(i);
     }
-    return sum;//placeholder to compile.
+    return sum;
   }
       
   /**
@@ -71,9 +73,10 @@ public class AlPractice{
   */
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
 
-		int temp = dataList.get(index1);
-		dataList.set(index1, dataList.get(index2));
-		dataList.set(index2, temp);
+		int temp = dataList.get(index1); //hold the first value in a variable
+		dataList.set(index1, dataList.get(index2)); //overwrite the first value with the second value
+		dataList.set(index2, temp); 		//overwrite the second value with the temp value
+
 
   }
 
@@ -90,7 +93,6 @@ public class AlPractice{
         dataList.remove(i);
       }
     }
-
   }
 
 
