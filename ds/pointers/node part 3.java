@@ -5,3 +5,5 @@ Create a new Node variable and instantiate it to a new Node with a value of 30.
 Write the code to insert this new Node between the 10 and the 15
 */
 
+Node x = p.getNext() // points to next node after p
+Node a = new Node (30); // creates new node variable = 30
