@@ -36,11 +36,11 @@ public class SortSearch{
     private Random r; 
 
     
-    // public SortSearch(){
-    // 	data = new ArrayList<Integer>();
-    // 	r = new Random();
-    // 	for (int i=0;i<15;i++){
-    // 	    data.add(r.nextInt(20)); // not including 20!
+    // public SortSearch(){ //constructor that makes array list of integers
+    // 	data = new ArrayList<Integer>(); //creates new list called data
+    // 	r = new Random(); //creates (instantiates) new random object r
+    // 	for (int i=0;i<15;i++){ //loops through array list indexes 0-14
+    // 	    data.add(r.nextInt(20)); // does not including 20!
     // 	}
 	
     // }
@@ -50,7 +50,7 @@ public class SortSearch{
 	
     }   
   
-    public SortSearch(int size){
+    public SortSearch(int size){ // makes an array list of a given size
     	data = new ArrayList<Integer>();
     	r = new Random();
     	for (int i=0;i<size;i++){
@@ -84,13 +84,13 @@ public class SortSearch{
     */
     public int findSmallestIndex(int start){
       if (start < 0 || start > data.size() - 1){
-        System.out.println("YO CHECK YOUR NUMBERS");
+        System.out.println("YO CHECK YOUR NUMBERS");// tells user that there's an error in their parameter (less than 0 or bigger than array)
         return -1;
       } else {
         int smallIndex = start;
       
-        for (int i=start; i<data.size(); i++){
-          if (data.get(i) < data.get(smallIndex)){
+        for (int i=start; i<data.size(); i++){ // loops through array, beginning at start parameter
+          if (data.get(i) < data.get(smallIndex)){//if value at the index being checked is smaller than the current index, smallIndex is updated
             smallIndex = i;
           }
         }
@@ -116,10 +116,10 @@ public class SortSearch{
     public void sort(){
       int smallestIndex;
       for (int i=0; i<data.size();i++){
-        smallestIndex = findSmallestIndex(i);
-        int temp = data.get(i);
-        data.set(i, data.get(smallestIndex));
-        data.set(smallestIndex, temp);   
+        smallestIndex = findSmallestIndex(i); //find smallest index starting at 0
+        int temp = data.get(i); // temp variable holds the smallest index while traversing through
+        data.set(i, data.get(smallestIndex)); //set index to traversed data from start
+        data.set(smallestIndex, temp); //temp is updated  
       }
     }
 
@@ -138,12 +138,12 @@ public class SortSearch{
 
     */
     public int linearSearch(int value){
-	    for(int i=0; i<data.size(); i++){
-        if (data.get(i) == value){
+	    for(int i=0; i<data.size(); i++){ //traverses array
+        if (data.get(i) == value){ //if current index is equal to parameter, return it
           return i;
         }
       }	
-	    return -1; // replace this return
+	    return -1; // else if not found, return -1
     }
     
     /**
