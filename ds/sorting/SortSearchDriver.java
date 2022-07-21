@@ -33,7 +33,7 @@ public class SortSearchDriver {
     System.out.println("Sorted array:");
   	System.out.println(ss);
 
-
+//we added a constructor to make a static sorted array, since it was annoying to have a bunch of random arrays 
     SortSearch searchArray = new SortSearch();
     System.out.println("Array used by search methods:");
   	System.out.println(searchArray);
@@ -52,6 +52,7 @@ public class SortSearchDriver {
     System.out.println("Element 0 is located at index (binarySearch): " + searchArray.binarySearch(0));
 
     System.out.println("Element 9 is located at index (binarySearch): " + searchArray.binarySearch(9));
-    
+
+    System.out.println("Element 11 is located at index (binarySearch): " + searchArray.binarySearch(11));
     }
 }

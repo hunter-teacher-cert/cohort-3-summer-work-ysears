@@ -44,9 +44,9 @@ public class SortSearch{
     // 	}
 	
     // }
-
+//Put this is to have a static array to test binary search
      public SortSearch(){
-       data = new ArrayList( Arrays.asList(new Integer[] { 0,1,2,3,4,5,6,7,8,9,10} ) );
+       data = new ArrayList<Integer>( Arrays.asList(new Integer[] { 0,1,2,3,4,5,6,7,8,9,10 } ) );
 	
     }   
   
@@ -159,10 +159,10 @@ public class SortSearch{
 	//   otherwise, update high, low, and middle
 
       int lowIndex = 0;
-      int highIndex = data.size();
-      int middleIndex = data.size() / 2;
+      int highIndex = data.size() - 1;
+      int middleIndex = data.size()/ 2;//-1 one here?
 
-      while (lowIndex < highIndex){
+      while (lowIndex <= highIndex){
 
         if (value == data.get(middleIndex)){
           return middleIndex;
@@ -173,7 +173,8 @@ public class SortSearch{
           	highIndex = middleIndex - 1;
           	middleIndex = (highIndex + lowIndex) / 2;
         }
-        
+        // to test
+        System.out.println("index" + lowIndex + " " + middleIndex + " " + highIndex);
       }
 	    return -1;
 	    
