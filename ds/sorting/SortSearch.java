@@ -162,7 +162,7 @@ public class SortSearch{
       int highIndex = data.size() - 1;
       int middleIndex = data.size()/ 2;//-1 one here?
 
-      while (lowIndex <= highIndex){
+      while (lowIndex <= highIndex){ 
 
         if (value == data.get(middleIndex)){
           return middleIndex;
