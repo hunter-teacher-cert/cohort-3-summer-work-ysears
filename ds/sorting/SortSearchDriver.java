@@ -54,5 +54,21 @@ public class SortSearchDriver {
     System.out.println("Element 9 is located at index (binarySearch): " + searchArray.binarySearch(9));
 
     System.out.println("Element 11 is located at index (binarySearch): " + searchArray.binarySearch(11));
+    
+       int size = 1000;
+
+      System.out.println("Start: ");
+      
+      ArrayList<Integer> a = ss.buildIncreasingList(20);
+	    System.out.println(a);
+
+      ArrayList<Integer> b = ss.buildIncreasingList(20);
+	    System.out.println(b);
+
+      System.out.println("");
+
+      ArrayList<Integer> c = ss.merge(a, b);
+      System.out.println(c);  
+    
     }
 }
