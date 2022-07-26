@@ -31,9 +31,8 @@ public class SortSearch{
     /* Sort project starts here */
     
     /* Instance Variables */
-    private ArrayList<Integer> data;  // to store the data
-    
-    private Random r; 
+  private ArrayList<Integer> data;  // to store the data
+  private Random r; 
 
     
     // public SortSearch(){ //constructor that makes array list of integers
@@ -42,31 +41,24 @@ public class SortSearch{
     // 	for (int i=0;i<15;i++){ //loops through array list indexes 0-14
     // 	    data.add(r.nextInt(20)); // does not including 20!
     // 	}
-	
     // }
 //Put this is to have a static array to test binary search
      public SortSearch(){
        data = new ArrayList<Integer>( Arrays.asList(new Integer[] { 0,1,2,3,4,5,6,7,8,9,10 } ) );
 	
     }   
-  
     public SortSearch(int size){ // makes an array list of a given size
     	data = new ArrayList<Integer>();
     	r = new Random();
     	for (int i=0;i<size;i++){
     	    data.add(r.nextInt(20));
     	}
-	
     }
-
-  
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
 			return this.data.get(index);
     }
     
-
-
     /*
       return the index of the smallest data idem from index start to the end
       of the ArrayList. If there are multiple of the smallest value,
@@ -84,9 +76,12 @@ public class SortSearch{
     */
     public int findSmallestIndex(int start){
       if (start < 0 || start > data.size() - 1){
-        System.out.println("YO CHECK YOUR NUMBERS");// tells user that there's an error in their parameter (less than 0 or bigger than array)
+        // tells user that there's an error 
+        //in their parameter (less than 0 or bigger than array)
+        System.out.println("YO CHECK YOUR NUMBERS");
         return -1;
-      } else {
+      } 
+      else {
         int smallIndex = start;
       
         for (int i=start; i<data.size(); i++){ // loops through array, beginning at start parameter
@@ -109,9 +104,6 @@ public class SortSearch{
          For each index, find the smallest from that Location
 	 to the end of the array and swap it with that index.
 
-	 
-       
-
     */
     public void sort(){
       int smallestIndex;
@@ -122,8 +114,6 @@ public class SortSearch{
         data.set(smallestIndex, temp); //temp is updated  
       }
     }
-
-
 
     /* Search project starts here */
     
@@ -264,17 +254,47 @@ public class SortSearch{
     }
       return mergedList;
     }
+
+public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
+      // check for base case--> if the length of the list is less than 2
+    if( list.size() <= 1){
+      return list;
+    } // if not the base case, split into 2 lists
+  else { 
+    int leftSize = list.size()/2;
+    int rightSize = list.size() - leftSize;
+
+    ArrayList<Integer> leftList = new ArrayList<Integer>(leftSize);
+    ArrayList<Integer> rightList = new ArrayList<Integer>(rightSize); //creates new array
+   
+
+    // split in two lists
+    for(int i = 0;i <leftSize;i++){
+      leftList.add(list.get(i)); //going through the first half of the list and adding elements to arraylist
+    }
+    for(int i = leftSize; i < list.size(); i++){
+      rightList.add(list.get(i));
+    }
+  // meregSort the left half
+    leftList = mergeSort(leftList);
+   // mergeSort the right half
+    rightList = mergeSort(rightList);
+    // merge them together into a new list
+    return merge(leftList,rightList);
+  } 
+  }
+
+
+  public void msort(){
+      data =  mergeSort(data);
+  }
+
+
+
+
+  
 }
-      /* while (i < list1.size() && j < list2.size()) {
-        if(list1.get(i) < list2.get(j)){
-          mergedList.add(list1.get(i));
-          i++;
-        }
-        else {mergedList.add(list2.get(j));
-          j++;
-             }
-        return mergedList;*/
-      
+     
 
 
 

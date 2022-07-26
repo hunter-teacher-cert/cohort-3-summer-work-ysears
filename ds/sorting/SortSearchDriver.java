@@ -3,8 +3,6 @@ import java.util.*;
 
 public class SortSearchDriver {
     public static void main(String[] args) {
-
-
 	// Part 1
 	
 	SortSearch ss = new SortSearch(10); // TODO: set this to 20
@@ -70,5 +68,15 @@ public class SortSearchDriver {
       ArrayList<Integer> c = ss.merge(a, b);
       System.out.println(c);  
     
+      
+//MergeSort
+      
+      int size = 10;
+    	SortSearch ss = new SortSearch(size);
+
+      System.out.println("Pre-Sort:\n" + ss);
+      ss.msort();
+      System.out.println("Post-Sort:\n" + ss);
+      
     }
 }
