@@ -257,7 +257,7 @@ public class SortSearch{
 
 public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
       // check for base case--> if the length of the list is less than 2
-    if( list.size() <= 1){
+    if( list.size() < 2){
       return list;
     } // if not the base case, split into 2 lists
   else { 
@@ -269,16 +269,24 @@ public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
    
 
     // split in two lists
-    for(int i = 0;i <leftSize;i++){
-      leftList.add(list.get(i)); //going through the first half of the list and adding elements to arraylist
+    for(int i = 0;i <leftSize; i++){
+      leftList.add(list.get(i)); 
+      //going through the first half 
+      //of the list and adding elements to arraylist
     }
     for(int i = leftSize; i < list.size(); i++){
       rightList.add(list.get(i));
     }
   // meregSort the left half
+    System.out.println("Left pre:    " + leftList);
     leftList = mergeSort(leftList);
+     System.out.println("Left post:  *" + leftList);
+    
    // mergeSort the right half
+    System.out.println("Right pre:   " + rightList);
     rightList = mergeSort(rightList);
+    System.out.println("Right post: *" + rightList);
+
     // merge them together into a new list
     return merge(leftList,rightList);
   } 
