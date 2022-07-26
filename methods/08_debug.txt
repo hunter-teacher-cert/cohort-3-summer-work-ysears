@@ -1,0 +1,64 @@
+Yanique Sears, Stacy G. TGK, Sueann S.
+Techniques
+*Reading error messages/using the compiler
+*When do you need brackets/indentations/semicolons
+*Commenting errors you see/have been corrected
+*Pair programming/debugging
+
+For student facing instructions, SEE BELOW CODE.
+
+/* Assume code sample is in a functional class file 
+with a class header and constructor so that it compiles */
+
+// Code sample with no spaces, braces, or semicolons
+public ArrayList<Integer> mergeSort(ArrayList<Integer> list)
+if (list.size() < 2)
+return list
+else
+int leftSize = list.size()/2
+int rightSize = list.size() - leftSize
+ArrayList<Integer> leftList = new ArrayList<Integer>(leftSize)
+ArrayList<Integer> rightList = new ArrayList<Integer>(rightSize)
+for (int i = 0; i < leftSize; i++)
+leftList.add(list.get(i))
+for (int i = leftSize; i < list.size(); i++)
+rightList.add(list.get(i))
+leftList = mergeSort(leftList)
+rightList = mergeSort(rightList)
+return merge(leftList,rightList)
+
+
+// Completed code sample
+public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
+    
+    if (list.size() < 2){
+      return list;
+    } else {
+
+      int leftSize = list.size()/2;
+      int rightSize = list.size() - leftSize;
+      
+      ArrayList<Integer> leftList = new ArrayList<Integer>(leftSize);
+      ArrayList<Integer> rightList = new ArrayList<Integer>(rightSize);
+
+      for (int i = 0; i < leftSize; i++){
+        leftList.add(list.get(i));
+      }
+
+      for (int i = leftSize; i < list.size(); i++){
+        rightList.add(list.get(i));
+      }
+
+      leftList = mergeSort(leftList);
+      rightList = mergeSort(rightList);
+
+      return merge(leftList,rightList);
+    }
+
+
+______________
+
+Task:
+1. Run the above code. It will generate error messages. Make a t-chart with the type of error in one column and what it means in the next column. (Hint: you might want to google some of these errors to get a better idea of what they do)
+2. Fix the errors with your group and compile.
+3. If you were teaching a classmate about these compiler errors - what would you tell them? What lessons have you learned from the code you corrected? 
