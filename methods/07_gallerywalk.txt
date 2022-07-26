@@ -1,4 +1,4 @@
-First Last
+Yanique Sears
 Methods Summer 2022
 GALLERY TOUR LOG
 
@@ -11,14 +11,18 @@ USAGE OF TOP SECTION:
 DISCOVERIES:
 * any cool tips/tricks/hacks you learned
 * 1 per line, please
-
+*You can add images by dragging them to GitHub
+*Checkboxes!
+* You can't change font in markdown
 
 LINGERING QUESTIONS:
 * 1 per line, please
+*How is a GitHub page more useful than say Google Classroom?
 
 
 COMMENTS/CONCERNS/OTHER:
 * 1 per line, please
+* Once I understood how the markdown works, it became less frustrating. The markdown cheatsheet was a big help.
 ====================================================
 
 
@@ -26,7 +30,7 @@ USAGE OF BOTTOM SECTION:
 * For any site you deem notable, add an entry using the format below
 ====================================================
 notable site:
-URL
-notable aspect:
-what is cool about this site
+https://herrkm.github.io/nycscertweb/
+notable aspect: Super clean formatting
+Kiana's formatting is very easy on the eyes. She also included code snippets, which was cool.
 -------------------------------------
