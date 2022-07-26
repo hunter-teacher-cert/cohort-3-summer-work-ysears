@@ -262,6 +262,9 @@ public class SortSearch{
         j++;
       }
     }
+      return mergedList;
+    }
+}
       /* while (i < list1.size() && j < list2.size()) {
         if(list1.get(i) < list2.get(j)){
           mergedList.add(list1.get(i));
@@ -274,7 +277,7 @@ public class SortSearch{
       
 
 
-}
+
 
 
 
