@@ -289,7 +289,7 @@ public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
 
     // merge them together into a new list
     return merge(leftList,rightList);
-  } 
+    } 
   }
 
 
