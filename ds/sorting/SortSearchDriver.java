@@ -4,7 +4,7 @@ import java.util.*;
 public class SortSearchDriver {
     public static void main(String[] args) {
 	// Part 1
-	
+	/*
 	SortSearch ss = new SortSearch(10); // TODO: set this to 20
 	System.out.println("New Array: \n" + ss);
 		
@@ -51,7 +51,7 @@ public class SortSearchDriver {
 
     System.out.println("Element 9 is located at index (binarySearch): " + searchArray.binarySearch(9));
 
-    System.out.println("Element 11 is located at index (binarySearch): " + searchArray.binarySearch(11));
+    System.out.println("Element 11 is located at index (binarySearch): " + searchArray.binarySearch(11)); 
     
        int size = 1000;
 
@@ -67,7 +67,7 @@ public class SortSearchDriver {
 
       ArrayList<Integer> c = ss.merge(a, b);
       System.out.println(c);  
-    
+    */
       
 //MergeSort
       
