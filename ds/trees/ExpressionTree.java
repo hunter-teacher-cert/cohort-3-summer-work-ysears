@@ -10,7 +10,7 @@ public class ExpressionTree{
       }
       else{
         //evaluates each side of the tree; 
-        // apply method simplifies things
+        // apply method simplifies things;
         return apply(left.evaluate(),right.evaluate(),operator);
       }
     }
